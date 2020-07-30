@@ -1,0 +1,214 @@
+<head>
+    <title>
+        JKP Weather | Home
+    </title>
+   <style>
+        /* get rid of white space */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+/* add color gradient, fill screen, and add some bottom padding */
+body { 
+  Background-image: linear-gradient(#42aaf5, #42f5d7);
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+/* center the satellite view text */
+.centertext {
+  text-align: center
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+}
+
+/* center iframe (embedded site) */
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+/* remove white space at the top and move text away from the corner */
+h1 {
+  margin: 0;
+  padding: 1em
+}
+
+.inner {
+  background-color: #003dad;
+  border-radius: 10px;
+  
+  color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  margin-left: 2.25em;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* display: table-cell; */
+  align-items: center;
+  text-align: center;
+ 
+}
+
+a {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #003dad;
+  color: white;
+  /* padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  margin-left: 2.25em;
+  margin-bottom: 10px;
+  border-radius: 10px; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  border: none;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+}
+
+/* Dropdown Content (Hidden by Default)  */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #003dad;
+  overflow: hidden;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /* left: -25px; */
+  top: 35px;
+  
+}
+
+/* Links inside the dropdown  */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(0, 110, 255);}
+
+/* Show the dropdown menu on hover  */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #003dad;}
+
+.end {
+    text-align: center;
+}
+   </style>
+</head>
+
+
+<body>
+    <div>
+        <h1>
+          Welcome to JKPWeather!
+        </h1>
+        <div class=outer>
+            <div class=inner>
+                <a href=indexv2.html class=not_dpdn>Home</a> 
+            </div>
+            <div class=inner>
+                <a href=7dayv2.html class=not_dpdn>7 Day Forecast</a>
+            </div>
+            <!-- <div class=inner>
+                <a href=thoughtsv2.html class=not_dpdn>Daily Thoughts</a>
+            </div>
+            <div class=inner>
+                <a href=storms.html>Storm-related Blogs</a>
+            </div> -->
+            <div class="dropdown inner">
+                <button class="dropbtn">Blogs</button>
+                <div class="dropdown-content">
+                    <a href=thoughtsv2.html class=dpdn>Daily Thoughts</a>
+                    <a href=storms.html class=dpdn>Storm-related Blogs</a>
+                </div>
+            </div> 
+            <!-- <div class=inner>
+                <a href=tropicalv2.html class=dpdn>Tropical Weather</a>
+            </div>
+            <div class=inner>
+                <a href=severe.html class=dpdn>Severe Weather</a>
+            </div>
+            <div class=inner>
+                <a href=winter.html>Winter Weather</a>
+            </div> -->
+            <div class=inner>
+                <a href=hur_scale.html>New Hurricane Scale</a>
+            </div>
+            <div class=inner>
+                <a href=log.html>Site Update Log</a>
+            </div> 
+            <div class="dropdown inner">
+                <button class="dropbtn">Severe Weather</button>
+                <div class="dropdown-content">
+                    <a href=tropicalv2.html class=dpdn>Tropical Weather</a>
+                    <a href=severe.html class=dpdn>Severe Weather</a>
+                    <a href=winter.html class=dpdn>Winter Weather</a>
+                </div>
+            </div> 
+            <div class="dropdown inner">
+                <button class="dropbtn">Archives</button>
+                <div class="dropdown-content">
+                    <a href=archive_7days.html class=dpdn>Archived 7 Day Forecasts</a>
+                    <a href=archive_severe.html class=dpdn>Archived Severe Weather Forecasts</a>
+                </div>
+            </div> 
+            <div class=inner>
+                <a href=about.html>About</a>
+            </div>
+        </div>
+        <h3 class="centertext"> 
+          Current CONUS Satellite View via COD Nexlab
+        </h3>
+        
+        <div class=nexlab>
+            <iframe src=https://weather.cod.edu/satrad/ height=614px width=100% class="center" clickable=no scrolling=no></iframe>
+        </div>
+        <p class=end>
+            © JKPWeather 2020 | All rights reserved 
+            <br>
+            Contact jkp.weather@gmail.com with comments, questions, or concerns.
+        </p>
+    </div>
+</body>

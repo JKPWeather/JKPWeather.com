@@ -1,0 +1,210 @@
+<head>
+    <title>
+        JKP Weather | Tropical Weather
+    </title>
+    <style>
+        /* take away the white space */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+/* add color gradient, fill screen, and add some padding on the bottom */
+.beginning { 
+  Background-image: linear-gradient(#42aaf5, #42f5d7);
+  width: 100%
+  padding-left: 10px;
+  margin-top: 0px;
+  padding-bottom: 20px
+}
+
+/* give more space around the text*/
+h3 {
+  Line-height: 1.8em;
+}
+
+/* add some padding and some space around the text */
+.storm_count {
+  Max-width: 400px;
+  Line-height: 1.2em;
+  padding-top: 1em
+}
+
+/* take away the white space on top */
+h1 {
+  margin: 0;
+  padding: 1em
+}
+
+/* move normal text away from the left side */
+p {
+  padding-left: 4em
+}
+
+/* move bold text away from the left side */
+strong {
+  padding-left: 3em
+}
+
+/* move larger text away from the left side */
+h3 {
+  padding-left: 2em
+}
+
+.outer_fcst {
+  /* margin-right: 2em; */
+  display: flex;
+  width: 30%;
+  text-color: #000000;
+  align-items: flex-end;
+  flex-direction: column
+}
+
+/* make a box, change its color, round the edges, and move the text away from the edges */
+.inner_fcst {
+  background-color: #009dff;
+  border-radius: 10px;
+  
+  color: #000000;
+  padding: 20px;
+  margin: 30px;
+  
+  width: 250px;
+  
+  line-height: 2em
+}
+
+.whole_page {
+  margin-right: 2em;
+  margin-left: 2em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+  
+.outlooks {
+  margin-top: 0px;
+  padding-top: 0px;
+  text-align: center;
+  width: 60%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  justify-content: space-between;
+}
+
+.inner {
+  background-color: #003dad;
+  border-radius: 10px;
+  
+  color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 2.25em;
+  margin-bottom: 10px;
+  
+  line-height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+}
+
+a {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+    </style>
+</head>
+
+
+<body>
+    <div class=beginning>
+        <h1>
+        Welcome to JKPWeather!
+        </h1>
+        <div class=outer>
+            <div class=inner>
+                <a href=indexv2.html>Home</a> 
+            </div>
+            <div class=inner>
+                <a href=7dayv2.html>7 Day Forecast</a>
+            </div>
+            <div class=inner>
+                <a href=thoughtsv2.html>Daily Thoughts</a>
+            </div>
+            <div class=inner>
+                <a href=storms.html>Storm-related Blogs</a>
+            </div>
+            <div class=inner>
+                <a href=tropicalv2.html>Tropical Weather</a>
+            </div>
+            <div class=inner>
+                <a href=severe.html>Severe Weather</a>
+            </div>
+            <div class=inner>
+                <a href=winter.html>Winter Weather</a>
+            </div>
+            <div class=inner>
+                <a href=hur_scale.html>New Hurricane Scale</a>
+            </div>
+            <div class=inner>
+                <a href=log.html>Site Update Log</a>
+            </div>
+        </div>
+        <div class=whole_page>
+            <div class=outlooks>
+                <h2>
+                    Tropical Storm Gonzalo Advisory #2 
+                    <br>
+                    5 PM 7/22/2020
+                </h2>
+                <img src=https://static.wixstatic.com/media/f141e4_baa68261d81b41eb822dca9ab1467de0~mv2.png/v1/fill/w_564,h_432,al_c,q_85,usm_0.66_1.00_0.01/TS_Gonzalo_%232.webp>
+            </div>
+            <div class=outer_fcst>
+                <h3> 
+                    Atlantic Hurricane Season 2020 Forecast:
+                </h3>
+                <div class=inner_fcst>
+                    <b> 
+                      JKPWeather Forecast: 
+                     <br>
+                    </b>
+               Named storms (average): 19 (12) <br>
+                Hurricanes (average): 11 (8) <br>
+               Major hurricanes (average): 4 (3) <br>
+                </div>
+                <div class=inner_fcst>
+                    <b> 
+                     Colorado State University Forecast: 
+                    <br>
+                    </b>
+          Named storms (average): 20 (12) <br>
+            Hurricanes (average): 9 (8) <br>
+            Major hurricanes (average): 4 (3)         <br>
+                </div>
+                <div class=inner_fcst>
+                    <b> 
+                     2020 Season So Far: 
+                    <br>
+                    </b>
+          Named storms (average): 6 (1) <br>
+            Hurricanes (average): 0 (0) <br>
+            Major hurricanes (average): 0 (0)       <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

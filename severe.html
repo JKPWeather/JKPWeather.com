@@ -1,0 +1,218 @@
+<head>
+    <title>
+        JKP Weather | Severe Weather
+    </title>
+    <style>
+        /* get rid of white space */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+/* add color gradient, fill screen, and add some bottom padding */
+.beginning { 
+  Background-image: linear-gradient(#42aaf5, #42f5d7);
+  width: 100%;
+  padding-bottom: 20px
+}
+
+/* make 7-day text closer to image and indented a bit */
+h3 {
+  Line-height: 0em;
+  margin-left: 2em;
+  margin-right: 2em
+}
+
+/* center image */
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+/* remove white space at the top and move text away from the corner */
+h1 {
+  margin: 0;
+  padding: 1em
+}
+
+/* make a box, change its color, round the edges, and move the image away from the edges */
+.outer_main {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.inner_main {
+  background-color: #009dff;
+  border-radius: 10px;
+  
+  color: #000000;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin: 30px;
+  width: 50%;
+  
+  line-height: 2em;
+  display: flex;
+  flex-direction: row;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  justify-content: space-between;
+}
+
+.inner {
+  background-color: #003dad;
+  border-radius: 10px;
+  
+  color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 2.25em;
+  margin-bottom: 10px;
+  
+  line-height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+}
+
+a {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.fcst_box {
+    display: flex;
+    color: #009dff;
+    margin-top: 20px;
+    flex-direction: column;
+    margin-left: 19%;
+    margin-right: 0%;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+}
+
+.spc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fcst {
+    color: #000000;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    text-indent: 16.5%;
+}
+
+iframe {
+    -ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: 0 0;
+}
+
+.outer_main {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.inner_main {
+  background-color: #009dff;
+  border-radius: 10px;
+  
+  color: #000000;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin: 30px;
+  width: 45%;
+  
+  line-height: 2em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+img {
+    -ms-zoom: 0.75;
+        -moz-transform: scale(0.65);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.65);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.65);
+        -webkit-transform-origin: 0 0;
+}
+    </style>
+</head>
+
+
+<body>
+    <div class=beginning>
+        <h1>
+          Welcome to JKPWeather!
+        </h1>
+        <div class=outer>
+            <div class=inner>
+                <a href=indexv2.html>Home</a> 
+            </div>
+            <div class=inner>
+                <a href=7dayv2.html>7 Day Forecast</a>
+            </div>
+            <div class=inner>
+                <a href=thoughtsv2.html>Daily Thoughts</a>
+            </div>
+            <div class=inner>
+                <a href=storms.html>Storm-related Blogs</a>
+            </div>
+            <div class=inner>
+                <a href=tropicalv2.html>Tropical Weather</a>
+            </div>
+            <div class=inner>
+                <a href=severe.html>Severe Weather</a>
+            </div>
+            <div class=inner>
+                <a href=winter.html>Winter Weather</a>
+            </div>
+            <div class=inner>
+                <a href=hur_scale.html>New Hurricane Scale</a>
+            </div>
+            <div class=inner>
+                <a href=log.html>Site Update Log</a>
+            </div>
+        </div>
+        <h3>
+            Day 1 SPC Outlook:
+        </h3>
+        <div class=outer_main>
+            <div class=inner_main>
+                <img src=severefcst.jpg></img>
+            </div>
+            <div class=inner_main style="overflow: hidden;">
+                <iframe src="https://www.spc.noaa.gov/products/outlook/day1otlk.html" scrolling="no" style="border: 0px; margin-left: -100px; margin-top: -140px; " width=45% height=930>
+            </div>
+        </div>
+    </div>
+</body>
