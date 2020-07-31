@@ -1,8 +1,8 @@
 <head>
     <title>
-        JKP Weather | Winter Weather
+        JKP Weather | Home
     </title>
-    <style>
+   <style>
         /* get rid of white space */
 body {
   margin: 0;
@@ -10,30 +10,36 @@ body {
 }
 
 /* add color gradient, fill screen, and add some bottom padding */
-.beginning { 
+body { 
   Background-image: linear-gradient(#42aaf5, #42f5d7);
   width: 100%;
-  padding-bottom: 20px
+  padding-bottom: 20px;
+}
+
+/* center the satellite view text */
+.centertext {
+  text-align: center
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+}
+
+/* center iframe (embedded site) */
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
 }
 
 /* remove white space at the top and move text away from the corner */
 h1 {
   margin: 0;
   padding: 1em
-}
-
-.sansserif {
-  font-family: sans-serif;
-  padding-left: 2.25em;
-  max-width: 30%;
-  line-height: 1.5em
-}
-
-.outer {
-  display: flex;
-  flex-direction: row;
-  width: 97%;
-  justify-content: space-between;
 }
 
 .inner {
@@ -128,35 +134,13 @@ a {
 
 .end {
     text-align: center;
-    height: 10px
 }
-
-h2 {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin-left: -2em;
-}
-
-.text {
-    width: 50%;
-    height: 481px;
-    line-height: 1.5em;
-    text-align: center;
-}
-
-.outerbox {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-    </style>
+   </style>
 </head>
 
 
 <body>
-    <div class=beginning>
+    <div>
         <h1>
           Welcome to JKPWeather!
         </h1>
@@ -202,35 +186,17 @@ h2 {
                 <a href=about.html>About</a>
             </div>
         </div>
-        <div class=outerbox>
-            <h2 class=sansserif>
-                About JKP Weather
-            </h2>
-        </div>
-        <div class=outerbox>
-            <p class=text>
-                Hello! I am JKP. 
-                I orignially created this site 
-                as a project in a web development 
-                course I took over the summer. 
-                10 pages and over 2,000 lines of code later, 
-                I have created JKPWeather.com. 
-                My goal with this website is to provide 
-                as much weather information as possible. 
-                Pages range from daily forecasts to SPC 
-                outlooks to an entirely new hurricane scale 
-                I have created. The next update to the site 
-                will be to add different satellite views. 
-                After that, a lofty goal is to add model data. 
-                If you have questions or comments, you can 
-                email me at jkp.weather@gmail.com or 
-                message me on Twitter @JKPWeather. Enjoy!
-            </p>
+        <h3 class="centertext"> 
+          Model data graciously provided by COD Nexlab
+        </h3>
+        
+        <div class=nexlab>
+            <iframe src=https://weather.cod.edu/forecast  height=950px width=2000px class="center" scrolling=no></iframe>
         </div>
         <p class=end>
             © JKPWeather 2020 | All rights reserved 
             <br>
             Contact jkp.weather@gmail.com with comments, questions, or concerns.
         </p>
-      </div>
+    </div>
 </body>

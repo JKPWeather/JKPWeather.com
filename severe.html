@@ -189,17 +189,19 @@ a {
 }
 
 h3 {
-    text-indent: 16.5%;
+    text-align: center;
 }
 
 iframe {
-    -ms-zoom: 0.75;
-        -moz-transform: scale(0.75);
+    -ms-zoom: 1;
+        -moz-transform: scale(1);
         -moz-transform-origin: 0 0;
-        -o-transform: scale(0.75);
+        -o-transform: scale(1);
         -o-transform-origin: 0 0;
-        -webkit-transform: scale(0.75);
+        -webkit-transform: scale(1);
         -webkit-transform-origin: 0 0;
+    position: relative;
+    z-index: -1;
 }
 
 .outer_main {
@@ -217,7 +219,7 @@ iframe {
   padding-top: 30px;
   padding-bottom: 10px;
   margin: 30px;
-  width: 45%;
+  width: 90%;
   
   line-height: 2em;
   display: flex;
@@ -260,6 +262,9 @@ img {
             <div class=inner>
                 <a href=hur_scale.html>New Hurricane Scale</a>
             </div>
+            <!-- <div class=inner>
+                <a href=models.html>Weather Models</a>
+            </div> -->
             <div class=inner>
                 <a href=log.html>Site Update Log</a>
             </div> 
@@ -271,13 +276,13 @@ img {
                     <a href=winter.html class=dpdn>Winter Weather</a>
                 </div>
             </div> 
-            <div class="dropdown inner">
+            <!-- <div class="dropdown inner">
                 <button class="dropbtn">Archives</button>
                 <div class="dropdown-content">
                     <a href=archive_7days.html class=dpdn>Archived 7 Day Forecasts</a>
                     <a href=archive_severe.html class=dpdn>Archived Severe Weather Forecasts</a>
                 </div>
-            </div> 
+            </div>  -->
             <div class=inner>
                 <a href=about.html>About</a>
             </div>
@@ -286,11 +291,15 @@ img {
             Day 1 SPC Outlook:
         </h3>
         <div class=outer_main>
-            <div class=inner_main>
+            <!-- <div class=inner_main>
                 <img src=severefcst.jpg></img>
-            </div>
-            <div class=inner_main style="overflow: hidden;">
-                <iframe src="https://www.spc.noaa.gov/products/outlook/day1otlk.html" scrolling="no" style="border: 0px; margin-left: -100px; margin-top: -140px; " width=45% height=930></iframe>
+            </div> -->
+            <!-- <div class=inner_main style="overflow: hidden;">
+                <iframe src="https://www.spc.noaa.gov/products/outlook/day1otlk.html" scrolling="no" style="border: 0px;" width=1200px; margin-top=-440px; height=960></iframe>
+            </div> -->
+            <div style="border: 3px solid #003dad; overflow: hidden; margin: 15px auto; max-width: 925px; height: 675px">
+                <iframe scrolling="no" src="https://www.spc.noaa.gov/products/outlook/day1otlk.html\\" style="border: 0px none; margin-left: -137px; margin-right: -20px; height: 859px; margin-top: -133px; width: 2050px;">
+                </iframe>
             </div>
         </div>
         <p class=end>
