@@ -1,8 +1,8 @@
 <head>
     <title>
-        JKP Weather | New Hurricane Scale
+        JKP Weather | Home
     </title>
-    <style>
+   <style>
         /* get rid of white space */
 body {
   margin: 0;
@@ -10,46 +10,36 @@ body {
 }
 
 /* add color gradient, fill screen, and add some bottom padding */
-.beginning { 
+body { 
   Background-image: linear-gradient(#42aaf5, #42f5d7);
   width: 100%;
-  padding-bottom: 20px
+  padding-bottom: 20px;
+}
+
+/* center the satellite view text */
+.centertext {
+  text-align: center
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+}
+
+/* center iframe (embedded site) */
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
 }
 
 /* remove white space at the top and move text away from the corner */
 h1 {
   margin: 0;
   padding: 1em
-}
-
-h2 {
-    margin-left: -.5em
-}
-
-h4 {
-    margin-left: 2.75em;
-    margin-bottom: 0;
-}
-
-.text {
-    margin-left: 2.75em;
-    margin-bottom: 0;
-    max-width: 40%;
-    line-height: 1.5em;
-}
-
-.sansserif {
-  font-family: sans-serif;
-  padding-left: 2.25em;
-  max-width: 30%;
-  line-height: 1.5em
-}
-
-.outer {
-  display: flex;
-  flex-direction: row;
-  width: 97%;
-  justify-content: space-between;
 }
 
 .inner {
@@ -145,29 +135,12 @@ a {
 .end {
     text-align: center;
 }
-
-.extra_space {
-    height: 500px
-}
-
-h2 {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
-}
-
-iframe {
-    width: 93.5%;
-    margin-top: 20px;
-    height: 900px;
-    margin-left: 2.7em;
-}
-    </style>
+   </style>
 </head>
 
 
 <body>
-    <div class=beginning>
+    <div>
         <h1>
           Welcome to JKPWeather!
         </h1>
@@ -192,8 +165,8 @@ iframe {
                 <a href=hur_scale.html>New Hurricane Scale</a>
             </div>
             <!-- <div class=inner>
-                <a href=models.html>Weather Models</a>
-            </div> -->
+              <a href=models.html>Weather Models</a>
+          </div> -->
             <div class=inner>
                 <a href=log.html>Site Update Log</a>
             </div> 
@@ -216,64 +189,17 @@ iframe {
                 <a href=about.html>About</a>
             </div>
         </div>
-        <h2 class=sansserif>
-            About my new hurricane scale:
-        </h2>
-        <h4>
-            A more extensive piece of writing on it may come soon.
-        </h4>
-        <p class=text>
-            I made a scale for measuring hurricanes 
-            that takes into account the proportion of 
-            deaths that occur from each threat 
-            (wind, rain, surge). You can see in the top
-            right of the spreadsheet the percentage of
-            deaths that each one causes and then
-            that extrapolated to add to 100%. I used
-            the Saffir-Simpson scale for wind and then just 
-            arbitrary marks for the others. I kept the 6 
-            categories (TS-5). To get a wind "score"
-            to add to the overall score which I used to
-            get the categories, I multiplied the wind
-            speeds by the percent of deaths they 
-            cause. To get a rain "score" I divided the 
-            Category 2 median wind (S-S scale; 103 mph)
-            by the Category 2 equivalent rain (14.5 inches) to 
-            make them of equal scales. In order to
-            compare my scale to the current
-            scale, I created a product similar
-            to the "practically perfect" product
-            for severe weather. It takes into 
-            account damage and deaths
-            caused by past storms to figure
-            out what category they 'should'
-            have been. To sort each into categories 
-            (two for each category on the scale; 
-            when I only sorted it into one for 
-            each it was nearly impossible to get 
-            a tropical storm), I just sorted by number 
-            and broke it into roughly equal sections. 
-            The average of the two numbers 
-            (one for deaths, one for damage), 
-            divided by two and rounded up, 
-            becomes the hindcast for a given storm. 
-            Feel free to get in touch if you have 
-            any comments, questions, or concerns. 
-            Ways to reach me are on the spreadsheet.
-            <br>
-            <br>
-            Here is the scale. The first tab is the methodology, 
-            the second is the three versions of the scale 
-            tested on every Atlantic basin land-impacting 
-            storm since 2012 and compared to the current scale, 
-            the third tab is the hindcast for deaths, and the 
-            fourth tab is the hindcast for damage.
-        </p>
-        <iframe src=https://docs.google.com/spreadsheets/d/1mZmd3XWVeY4GEvuXSxgnl0X673S-SW64ZDcSM12vg2Q/edit?usp=sharing></iframe>
+        <h3 class="centertext"> 
+          Satellites
+        </h3>
+        
+        <div class=nexlab>
+            <iframe src=https://weather.cod.edu/satrad/ height=950px width=100% class="center" clickable=no scrolling=no></iframe>
+        </div>
         <p class=end>
             © JKPWeather 2020 | All rights reserved 
             <br>
             Contact jkp.weather@gmail.com with comments, questions, or concerns.
         </p>
-      </div>
+    </div>
 </body>
