@@ -12,7 +12,7 @@
       <title>
           JKP Weather | Microwave Imagery
       </title>
-      <style>
+     <style>
           /* get rid of white space */
   body {
     margin: 0;
@@ -20,23 +20,15 @@
   }
   
   /* add color gradient, fill screen, and add some bottom padding */
-  .beginning { 
+  body { 
     Background-image: linear-gradient(#42aaf5, #42f5d7);
     width: 100%;
-    padding-bottom: 20px
+    padding-bottom: 20px;
   }
   
-  /* remove white space at the top and move text away from the corner */
-  h1 {
-    margin: 0;
-    padding: 1em
-  }
-  
-  .sansserif {
-    font-family: sans-serif;
-    padding-left: 2.25em;
-    max-width: 30%;
-    line-height: 1.5em
+  /* center the satellite view text */
+  .centertext {
+    text-align: center
   }
   
   .outer {
@@ -44,6 +36,20 @@
     flex-direction: row;
     width: 97%;
     justify-content: space-between;
+  }
+  
+  /* center iframe (embedded site) */
+  .center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+  }
+  
+  /* remove white space at the top and move text away from the corner */
+  h1 {
+    margin: 0;
+    padding: 1em
   }
   
   .inner {
@@ -138,86 +144,77 @@
   
   .end {
       text-align: center;
+      padding-bottom: 0.75em;
   }
-  
-  .extra_space {
-      height: 44%
-  }
-  
-  h2 {
-      width: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-      justify-content: center;
-      margin-left: -0.75em;
-  }
-      </style>
+     </style>
   </head>
   
   
   <body>
-      <div class=beginning>
+      <div>
           <h1>
             Welcome to JKPWeather!
           </h1>
           <div class=outer>
-            <div class=inner>
-                <a href=index.html class=not_dpdn>Home</a> 
-            </div>
-            <div class=inner>
-                <a href=7dayv2.html class=not_dpdn>7 Day Forecast</a>
-            </div>
-            <div class="dropdown inner">
-                <button class="dropbtn">Blogs</button>
-                <div class="dropdown-content">
-                    <a href=thoughtsv2.html class=dpdn>Daily Thoughts</a>
-                    <a href=storms.html class=dpdn>Storm-related Blogs</a>
-                </div>
-            </div> 
-            <div class=inner>
-                <a href=hur_scale.html>New Hurricane Scale</a>
-            </div>
-            <div class="dropdown inner">
-              <button class="dropbtn">Satellite Products</button>
-              <div class="dropdown-content">
-                  <a href=satellites.html class=dpdn>Satellite Imagery</a>
-                  <a href=microwave.html class=dpdn>Microwave Imagery</a>
+              <div class=inner>
+                  <a href=index.html class=not_dpdn>Home</a> 
               </div>
-          </div> 
-            <!-- <div class=inner>
-              <a href=models.html>Weather Models</a>
-          </div> -->
-            <div class=inner>
-                <a href=log.html>Site Update Log</a>
-            </div> 
-            <div class="dropdown inner">
-                <button class="dropbtn">Severe Weather</button>
+              <div class=inner>
+                  <a href=7dayv2.html class=not_dpdn>7 Day Forecast</a>
+              </div>
+              <div class="dropdown inner">
+                  <button class="dropbtn">Blogs</button>
+                  <div class="dropdown-content">
+                      <a href=thoughtsv2.html class=dpdn>Daily Thoughts</a>
+                      <a href=storms.html class=dpdn>Storm-related Blogs</a>
+                  </div>
+              </div>
+              <div class=inner>
+                  <a href=hur_scale.html>New Hurricane Scale</a>
+              </div>
+              <div class="dropdown inner">
+                <button class="dropbtn">Satellite Products</button>
                 <div class="dropdown-content">
-                    <a href=tropicalv2.html class=dpdn>Tropical Weather</a>
-                    <a href=severe.html class=dpdn>Severe Weather</a>
-                    <a href=winter.html class=dpdn>Winter Weather</a>
+                    <a href=satellites.html class=dpdn>Satellite Imagery</a>
+                    <a href=microwave.html class=dpdn>Microwave Imagery</a>
                 </div>
             </div> 
-            <!-- <div class="dropdown inner">
-                <button class="dropbtn">Archives</button>
-                <div class="dropdown-content">
-                    <a href=archive_7days.html class=dpdn>Archived 7 Day Forecasts</a>
-                    <a href=archive_severe.html class=dpdn>Archived Severe Weather Forecasts</a>
-                </div>
-            </div>  -->
-            <div class=inner>
-                <a href=about.html>About</a>
-            </div>
-        </div>
-          <h2 class=sansserif>
-            The microwave imagery page is down. The embedded site is not secure, which means it can't be embedded on a secure site. I hope to fix the issue soon.
-          </h2>
-          <div class=extra_space>
-  
+              <!-- <div class=inner>
+                <a href=models.html>Weather Models</a>
+            </div> -->
+              <div class=inner>
+                  <a href=log.html>Site Update Log</a>
+              </div> 
+              <div class="dropdown inner">
+                  <button class="dropbtn">Severe Weather</button>
+                  <div class="dropdown-content">
+                      <a href=tropicalv2.html class=dpdn>Tropical Weather</a>
+                      <a href=severe.html class=dpdn>Severe Weather</a>
+                      <a href=winter.html class=dpdn>Winter Weather</a>
+                  </div>
+              </div> 
+              <!-- <div class="dropdown inner">
+                  <button class="dropbtn">Archives</button>
+                  <div class="dropdown-content">
+                      <a href=archive_7days.html class=dpdn>Archived 7 Day Forecasts</a>
+                      <a href=archive_severe.html class=dpdn>Archived Severe Weather Forecasts</a>
+                  </div>
+              </div>  -->
+              <div class=inner>
+                  <a href=about.html>About</a>
+              </div>
+          </div>
+          <h3 class="centertext"> 
+            Microwave imagery via CIMSS MIMIC
+          </h3>
+          
+          <div class=nexlab>
+              <iframe src=tropic.ssec.wisc.edu/real-time/mimtc/tc.shtml height=1114px width=auto class="center" clickable=no scrolling=no></iframe>
           </div>
           <p class=end>
-            Copyright JKPWeather 2020 | All rights reserved 
-            <br>
-            Contact jkp.weather@gmail.com with comments, questions, or concerns.
-        </p>
-        </div>
+              Copyright JKPWeather 2020 | All rights reserved 
+              <br>
+              Contact jkp.weather@gmail.com with comments, questions, or concerns.
+          </p>
+      </div>
   </body>
