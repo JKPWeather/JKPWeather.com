@@ -49,7 +49,7 @@
   }
   
   /* make a box, change its color, round the edges, and move the image away from the edges */
-  .page {
+  .outer_main {
     display: flex;
     flex-direction: row;
     padding-left: 0.5em;
@@ -57,7 +57,7 @@
     margin-top: -1.1em;
   }
   
-  .outer_main {
+  .inner_main {
     background-color: #009dff;
     border-radius: 10px;
     
@@ -172,15 +172,6 @@
   .end {
       text-align: center;
   }
-  
-  .extra {
-    /* height: 7%; */
-  }
-
-  .permission {
-        text-align: center;
-        width: 100%
-  }
       </style>
   </head>
   
@@ -247,32 +238,17 @@
           </div>
         </div>
           <h3 style="text-align:left;">
-            Top to bottom:
-            7/30/2020, 7/30/2020, 7/23/2020, 7/23/2020
+            New Hurricane Scale v3 Against Hindcast:
             <span style="float:right;">
-                Top to bottom: 
-                7/26/2020, 7/24/2020, 6/28/2020, 6/21/2020
+                Saffir-Simpson Scale Against Hindcast:
             </span>
           </h3>
-          <div class=page>
-            <div class=outer_main>
-                <div class=inner_main>
-                    <img src=Thunderstorm2_7.30.2020.png class="center">
-                    <img src=Thunderstorm1_7.30.2020.png class="center">
-                    <img src=Shelf2_7.23.2020.png class="center">
-                    <img src=Shelf_cloud_7.23.2020.png class="center">
-                </div>
+          <div class=outer_main>
+            <div class=inner_main>
+              <img src=v3_vs_hindcast.png class="center" height=575px> 
             </div>
-            <div class=outer_main>
-                <div class=inner_main>
-                    <img src=Sunset_7.26.2020.png class="center">
-                    <img src=Sunset_7.24.2020.png class="center">
-                    <img src=Mammatus_6.28.2020.png class="center">
-                    <img src=Overshooting_top_6.21.2020.png class="center">
-                    <h4 class=permission>
-                        All photos taken and owned by JKP. <br> Not for use without express permission. <br> Contact jkp.weather@gmail.com for licensing.
-                    </h4>
-                </div>
+            <div class=inner_main>
+              <img src=SS_vs_hindcast.png class='center'>
             </div>
           </div>
           <p class=extra>
